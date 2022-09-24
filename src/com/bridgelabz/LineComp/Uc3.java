@@ -2,13 +2,23 @@ package com.bridgelabz.LineComp;
 
 import java.util.Scanner;
 
-public class Uc2 {
+public class Uc3 {
+	
+	public void compareTo(float l1, float l2) {
+		if (l1 == l2)
+			System.out.println("both are equal");
+		
+		else {
+			System.out.println("they are not equal");
+		}
+	
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		float x1, x2, y1, y2;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("For line 1 ");
+		System.out.println("For line 1 :");
 		System.out.print("Enter the value of x1 : ");
 		x1 = sc.nextFloat();
 		System.out.print("Enter the value of y1 : ");
@@ -24,11 +34,11 @@ public class Uc2 {
 		length1 = (float)Math.sqrt(((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1)));
 		
 		
+		
 //		line 2
 		System.out.print("Length of l1 is : "+length1);
-		
 		float x3, x4, y3, y4;
-		System.out.println("For line 2 ");
+		System.out.println("For line 2 :");
 		System.out.print("Enter the value of x3 : ");
 		x3 = sc.nextFloat();
 		System.out.print("Enter the value of y3 : ");
@@ -46,12 +56,8 @@ public class Uc2 {
 		System.out.println("Length of l2 is : "+length2);
 		
 		
-		if (length1 == length2)
-			System.out.println("Both are equal");
-		
-		else {
-			System.out.println("They are not equal");
-		}
+		Uc3 uc = new Uc3();
+		uc.compareTo(length1 , length2);
 		
 	    sc.close();
 	}
